@@ -5,18 +5,20 @@
  * @Mr. Jaffe
  * @1.0 2017-07-13
  */
-public class Die20
+public class Dice
 {
   /**
    * Contains the current value of the die
    */
-  public int value;
+  Die6 die6 = new Die6();
+  Die20 die20 = new Die20();
 
   /**
    * Constructor to do an initial roll to set the first value
    */
-  public Die20() {
-    this.roll();
+  public Dice() {
+    die6.roll();
+    die20.roll();
   }
 
   /**
@@ -28,11 +30,11 @@ public class Die20
   }
 
   /**
-   * Roll the die! Generate random number 1 <= x <= 20 and assign to value
+   * Roll the die! Generate random number 1 <= x <= n and assign to value
    * Note that roll does NOT return the new value
    */
   public void roll() {
-    this.value = (int)(Math.random() * 20) + 1;
+    this.value = (int)(Math.random() * n) + 1;
   }
 
   /**
