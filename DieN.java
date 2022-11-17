@@ -11,12 +11,13 @@ public class DieN
    * Contains the current value of the die
    */
   private int value;
-  private int n = 300;
+  private int n;
 
   /**
    * Constructor to do an initial roll to set the first value
    */
-  public DieN() {
+  public DieN(int sides) {
+      this.n = sides;
     this.roll();
   }
 
