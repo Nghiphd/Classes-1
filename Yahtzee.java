@@ -27,7 +27,30 @@ public class Yahtzee
         die4.roll();
         die5.roll();
     }
-    public int roll(int dieNumber) {
-    return dieNumber;
+    public void roll(int dieNumber) {
+        if(dieNumber == 1) {
+            die1.roll();
+        } else if (dieNumber == 2) {
+            die1.roll();
+            die2.roll();
+        } else if (dieNumber == 3) {
+            die1.roll();
+            die2.roll();
+            die3.roll();
+        } else if (dieNumber == 4) {
+            die1.roll();
+            die2.roll();
+            die3.roll();
+            die4.roll();
+        } else {
+            die1.roll();
+            die2.roll();
+            die3.roll();
+            die4.roll();
+            die5.roll();
+        }
+    }
+    public String summerize() {
+        return ("1-" + die1.value + "2-" + die2.value + "3-" + die3.value + "4-" + die4.value + "5-" + die5.value);
     }
 }
