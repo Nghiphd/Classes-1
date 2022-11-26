@@ -7,7 +7,6 @@
  */
 public class Yahtzee
 {
-    private int value;
     Die6 die1 = new Die6();
     Die6 die2 = new Die6();
     Die6 die3 = new Die6();
@@ -37,20 +36,17 @@ public class Yahtzee
             die1.roll();
             die2.roll();
             die3.roll();
-        } else if (dieNumber == 4) {
-            die1.roll();
-            die2.roll();
-            die3.roll();
-            die4.roll();
         } else {
             die1.roll();
             die2.roll();
             die3.roll();
             die4.roll();
-            die5.roll();
         }
     }
     public String summerize() {
-        return ("1-" + die1.value + "2-" + die2.value + "3-" + die3.value + "4-" + die4.value + "5-" + die5.value);
+        return ("1-" + die1.value + "; 2-" + die2.value + "; 3-" + die3.value + "; 4-" + die4.value + "; 5-" + die5.value + ";");
+    }
+    public String toString() {
+        return("Dice Values: " + die1.value + " " + die2.value + " " + die3.value + " " + die4.value + " " + die5.value); 
     }
 }
