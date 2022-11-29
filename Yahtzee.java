@@ -41,13 +41,8 @@ public class Yahtzee
         }
     }
     public String summerize() {
-        int sum1 = val(1);
-        int sum2 = val(2);
-        int sum3 = val(3);
-        int sum4 = val(4);
-        int sum5 = val(5);
-        int sum6 = val(6);
-        return("1-"+sum1+"; 2-"+sum2+"; 3-"+sum3+"; 4-"+sum4+"; 5-"+sum5+"; 6-"+sum6+";");        
+        int[] two = new int[]{ val (1), val (2), val (3), val (4), val (5), val (6) };
+        return("1-"+two[0]+"; 2-"+two[1]+"; 3-"+two[2]+"; 4-"+two[3]+"; 5-"+two[4]+"; 6-"+two[5]+";");        
         
     }
     public String toString() {
