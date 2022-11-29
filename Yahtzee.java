@@ -36,44 +36,31 @@ public class Yahtzee
             die3.roll();
         } else if (dieNumber == 4) {
             die4.roll();
-        } else {
+        } else if(dieNumber == 5) {
             die5.roll();
         }
     }
     public String summerize() {
-        int val1 = 0;
-        int val2 = 0;
-        int val3 = 0;
-        int val4 = 0;
-        int val5 = 0;
-        int val6 = 0;
-        val(1, val1);
-        val(2, val2);
-        val(3, val3);
-        val(4, val4);
-        val(5, val5);
-        String vals = val1+" "+val2+" "+val3+" "+val4+" " +val5+" ";
-        return(vals);        
+        int sum1 = val(1);
+        int sum2 = val(2);
+        int sum3 = val(3);
+        int sum4 = val(4);
+        int sum5 = val(5);
+        int sum6 = val(6);
+        return("1-"+sum1+"; 2-"+sum2+"; 3-"+sum3+"; 4-"+sum4+"; 5-"+sum5+"; 6-"+sum6+";");        
         
     }
     public String toString() {
         return("Dice Values: " + die1.value + " " + die2.value + " " + die3.value + " " + die4.value + " " + die5.value); 
     }
-    public void val(int val, int count) {
-        if(die1.value == val) {
-            count++;
-        } 
-        if(die2.value == val) {
-            count++;
-        } 
-        if(die3.value == val) {
-            count++;
-        } 
-        if(die4.value == val) {
-            count++;
-        } 
-        if (die5.value == val) {
-            count++;
+    public int val(int val) {
+        int count = 0;
+        int[] array = new int[]{die1.value,die2.value,die3.value,die4.value,die5.value};
+        for(int i : array) {
+            if(i == val) {
+                count++;
+            }
         }
+        return count;
     }
 }
